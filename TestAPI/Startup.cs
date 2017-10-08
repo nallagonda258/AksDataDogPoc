@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TestAPI.Repositories;
 using TestAPI.DataStore;
+using TestAPI.Utilities;
 using Microsoft.EntityFrameworkCore;
 
 namespace TestAPI
@@ -39,6 +40,7 @@ namespace TestAPI
 			});
 
             services.AddSingleton<IPhoneNumberRepository, PhoneNumberRepository>();
+            services.AddSingleton<IPhoneNumberFormat,USPhoneNumberFormat>();
             services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase());
             services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();
             services.AddMvc();

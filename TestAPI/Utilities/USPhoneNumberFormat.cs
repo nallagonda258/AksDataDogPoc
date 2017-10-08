@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 namespace TestAPI.Utilities
 {
     public class USPhoneNumberFormat : IPhoneNumberFormat
@@ -19,7 +20,14 @@ namespace TestAPI.Utilities
 
         public string userFriendlyFormat(string number)
         {
-            throw new NotImplementedException();
+            StringBuilder formattedNumber = new StringBuilder(number.Substring(0,1));
+            formattedNumber.Append("-(");
+            formattedNumber.Append(number.Substring(1,3));
+            formattedNumber.Append(")-");
+            formattedNumber.Append(number.Substring(4,3));
+            formattedNumber.Append("-");
+            formattedNumber.Append(number.Substring(7, 4));
+			return formattedNumber.ToString();
         }
     }
 }

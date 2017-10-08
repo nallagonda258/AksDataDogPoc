@@ -7,6 +7,7 @@ using TestAPI.Repositories;
 using TestAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using TestAPI.DataStore;
+using TestAPI.Utilities;
 
 namespace TestAPI.Controllers
 {
@@ -16,10 +17,12 @@ namespace TestAPI.Controllers
 
 
         private readonly IPhoneNumberRepository _phoneNumberRepository;
+        private IPhoneNumberFormat _phoneNumberFormatter;
 
-		public PhoneNumberController(IPhoneNumberRepository phoneRepository,ApiContext context)
+		public PhoneNumberController(IPhoneNumberRepository phoneRepository, IPhoneNumberFormat formatter)
 		{
 			_phoneNumberRepository = phoneRepository;
+            _phoneNumberFormatter = formatter;
 		}
 
 
@@ -29,9 +32,14 @@ namespace TestAPI.Controllers
 
             List<string> customerPhoneNumbers = _phoneNumberRepository.GetAll(id);
             PhoneNumber phNumberDTO = new PhoneNumber();
+            int i = 0;
             phNumberDTO.PhoneNumbers = customerPhoneNumbers.ToArray();
-            return Ok(phNumberDTO);
-                        
+            foreach(string phNumber in customerPhoneNumbers)
+            {
+                phNumberDTO.PhoneNumbers[i] = _phoneNumberFormatter.userFriendlyFormat(phNumber);
+				i++;
+            }
+            return Ok(phNumberDTO);                      
 		}
 
         [HttpPost]
