@@ -8,6 +8,6 @@ namespace TestAPI.Repositories
     public interface IPhoneNumberRepository
     {
       void Add(PhoneNumberEntity phoneNumber);
-       IEnumerable<List<string>> GetAll(int id);
+      List<string> GetAll(int id);
     }
 }

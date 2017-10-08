@@ -16,50 +16,23 @@ namespace TestAPI.Controllers
 
 
         private readonly IPhoneNumberRepository _phoneNumberRepository;
-        private ApiContext _context;
 
 		public PhoneNumberController(IPhoneNumberRepository phoneRepository,ApiContext context)
 		{
 			_phoneNumberRepository = phoneRepository;
-            _context = context;
 		}
 
 
 		[HttpGet(Name = "GetPhoneNumbers")]
-		public List<string> GetPhoneNumbers(int id)
+        public IActionResult GetPhoneNumbers(int id)
 		{
-            /*
-            var customerPhoneNumbers = _phoneNumberRepository.GetAll(id);
 
-            var allEntitysDto = customerPhoneNumbers.Select(x => Mapper.Map<HouseDto>(x));
-
-            Response.Headers.Add("X-Pagination",
-            JsonConvert.SerializeObject(new { totalCount = _houseRepository.Count() }));
-
-            var customerPhoneNumbers = _context.customerPhoneNumbers.Where(p => p.CustomerId == id).Select(x => x.PhoneNumbers.ToList()).ToArray();
-
-            return Ok(customerPhoneNumbers);
-            */
-            List<string> y = _context.customerPhoneNumber.Where(m => m.CustomerId==id).Select(m=>m.PhoneNumber).ToList();
-            return y;
+            List<string> customerPhoneNumbers = _phoneNumberRepository.GetAll(id);
+            PhoneNumber phNumberDTO = new PhoneNumber();
+            phNumberDTO.PhoneNumbers = customerPhoneNumbers.ToArray();
+            return Ok(phNumberDTO);
                         
 		}
-        /*
-        // GET api/values
-        [HttpGet(Name = "GetPhoneNumbers")]
-        public IEnumerable<string> GetPhoneNumbers(int id)
-        {
-            return new string[] { "value1", "value2"};
-        }
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-        */
-        // POST api/values
-
 
         [HttpPost]
         public IActionResult Post(int id,[FromBody]PhoneNumber numberList)
@@ -81,7 +54,6 @@ namespace TestAPI.Controllers
             for (int i = 0; i < numberList.PhoneNumbers.Length;i++)
             {
                 data.AddContent(numberList.PhoneNumbers[i]);
-                _context.customerPhoneNumber.Add(new PhoneNumberRecord(id,numberList.PhoneNumbers[i]));
             }
 
             _phoneNumberRepository.Add(data);
@@ -90,10 +62,8 @@ namespace TestAPI.Controllers
             bool result = true;
 			if (!result)
 			{
-				throw new Exception("something went wrong when adding a new House");
+				throw new Exception("something went wrong when adding a new entry");
 			}
-			
-			_context.SaveChanges();
             return CreatedAtRoute("GetPhoneNumbers",new { id = id} ,data);
         }
     }

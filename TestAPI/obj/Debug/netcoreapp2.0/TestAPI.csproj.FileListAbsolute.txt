@@ -9,3 +9,15 @@
 /Users/hemanthshetty/Projects/TestAPI/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.AssemblyInfo.cs
 /Users/hemanthshetty/Projects/TestAPI/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.dll
 /Users/hemanthshetty/Projects/TestAPI/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.pdb
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/bin/Debug/netcoreapp2.0/libe_sqlite3.dylib
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/bin/Debug/netcoreapp2.0/TestAPI.deps.json
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/bin/Debug/netcoreapp2.0/TestAPI.runtimeconfig.json
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/bin/Debug/netcoreapp2.0/TestAPI.runtimeconfig.dev.json
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/bin/Debug/netcoreapp2.0/TestAPI.dll
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/bin/Debug/netcoreapp2.0/TestAPI.pdb
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.csprojResolveAssemblyReference.cache
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.csproj.CoreCompileInputs.cache
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.AssemblyInfoInputs.cache
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.AssemblyInfo.cs
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.dll
+/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj/Debug/netcoreapp2.0/TestAPI.pdb

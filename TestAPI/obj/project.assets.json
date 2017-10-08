@@ -28887,10 +28887,10 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hemanthshetty/Projects/TestAPI/TestAPI/TestAPI.csproj",
+      "projectUniqueName": "/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/TestAPI.csproj",
       "projectName": "TestAPI",
-      "projectPath": "/Users/hemanthshetty/Projects/TestAPI/TestAPI/TestAPI.csproj",
-      "outputPath": "/Users/hemanthshetty/Projects/TestAPI/TestAPI/obj",
+      "projectPath": "/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/TestAPI.csproj",
+      "outputPath": "/Users/hemanthshetty/Projects/TestAPI/ASP.NET-Web-API/TestAPI/obj",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp2.0"

@@ -40,6 +40,7 @@ namespace TestAPI
 
             services.AddSingleton<IPhoneNumberRepository, PhoneNumberRepository>();
             services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase());
+            services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();
             services.AddMvc();
         }
 
