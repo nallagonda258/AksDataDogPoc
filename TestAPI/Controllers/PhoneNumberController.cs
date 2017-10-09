@@ -8,6 +8,8 @@ using TestAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using TestAPI.DataStore;
 using TestAPI.Utilities;
+using TestAPI.Messages;
+using TestAPI.Messages.ErrorHandling;
 
 namespace TestAPI.Controllers
 {
@@ -45,7 +47,8 @@ namespace TestAPI.Controllers
         [HttpPost]
         public IActionResult Post(int id,[FromBody]PhoneNumber numberList)
         {
-            
+
+            IList<StatusMessage> response = new List<StatusMessage>();
             if (numberList == null)
 			{
 				return BadRequest("No Phone number were passed");
@@ -64,6 +67,18 @@ namespace TestAPI.Controllers
                 if (_phoneNumberFormatter.isValidNumber(numberList.PhoneNumbers[i]))
                 {
                     data.AddContent(_phoneNumberFormatter.countryCodeFormat(numberList.PhoneNumbers[i]));
+                    var success = new SuccessMessage();
+                    success.Message = "Success";
+                    success.result = numberList.PhoneNumbers[i];
+                    response.Add(success);
+                }
+                else
+                {
+                    var error = new InvalidPhoneNumber();
+                    error.Message = "Invalid Phone Number";
+                    error.ErrorCode = 5124;
+                    error.InvalidNumber = numberList.PhoneNumbers[i];
+                    response.Add(error);
                 }
             }
 
@@ -75,7 +90,7 @@ namespace TestAPI.Controllers
 			{
 				throw new Exception("something went wrong when adding a new entry");
 			}
-            return CreatedAtRoute("GetPhoneNumbers",new { id = id} ,data);
+            return CreatedAtRoute("GetPhoneNumbers",new { id = id} ,response);
         }
     }
 }

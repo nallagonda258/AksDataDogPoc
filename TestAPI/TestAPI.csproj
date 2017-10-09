@@ -11,6 +11,8 @@
     <Folder Include="Model\" />
     <Folder Include="Utilities\" />
     <Folder Include="DataStore\" />
+    <Folder Include="Messages\" />
+    <Folder Include="Messages\ErrorHandling\" />
   </ItemGroup>
 
   <ItemGroup>

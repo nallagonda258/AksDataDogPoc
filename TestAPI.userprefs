@@ -1,9 +1,13 @@
 ﻿<Properties StartupConfiguration="{A574DCC2-E658-400A-B94F-17E5B7EBE887}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestAPI/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestAPI/Messages/ErrorHandling/InvalidPhoneNumber.cs">
     <Files>
-      <File FileName="TestAPI/Utilities/USPhoneNumberFormat.cs" Line="29" Column="57" />
-      <File FileName="TestAPI/Controllers/PhoneNumberController.cs" Line="42" Column="36" />
-      <File FileName="TestAPI/Startup.cs" Line="43" Column="73" />
+      <File FileName="TestAPI/Utilities/USPhoneNumberFormat.cs" Line="96" Column="6" />
+      <File FileName="TestAPI/Controllers/PhoneNumberController.cs" Line="72" Column="21" />
+      <File FileName="TestAPI/Startup.cs" Line="42" Column="13" />
+      <File FileName="TestAPI/Messages/ErrorMessage.cs" Line="4" Column="45" />
+      <File FileName="TestAPI/Messages/SuccessMessage.cs" Line="9" Column="4" />
+      <File FileName="TestAPI/Messages/StatusMessage.cs" Line="10" Column="4" />
+      <File FileName="TestAPI/Messages/ErrorHandling/InvalidPhoneNumber.cs" Line="4" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
