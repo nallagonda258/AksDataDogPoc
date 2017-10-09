@@ -61,7 +61,10 @@ namespace TestAPI.Controllers
 
             for (int i = 0; i < numberList.PhoneNumbers.Length;i++)
             {
-                data.AddContent(numberList.PhoneNumbers[i]);
+                if (_phoneNumberFormatter.isValidNumber(numberList.PhoneNumbers[i]))
+                {
+                    data.AddContent(_phoneNumberFormatter.countryCodeFormat(numberList.PhoneNumbers[i]));
+                }
             }
 
             _phoneNumberRepository.Add(data);
