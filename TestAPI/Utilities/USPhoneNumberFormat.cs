@@ -30,17 +30,6 @@ namespace TestAPI.Utilities
 
         private string formatInputPhoneNumber(string number)
         {
-            /*
-            StringBuilder formattedStr = new StringBuilder(number);
-			for (int i = 0; i < formattedStr.Length; i++)
-			{
-                if (formattedStr[i].Equals('-') || formattedStr[i].Equals('(')||formattedStr[i].Equals(')'))
-				{
-					formattedStr.Remove(i, 1);
-				}
-			}
-            return formattedStr.ToString();
-            */
             StringBuilder formattedStr = new StringBuilder();
             string[] numberParts=number.Split('-');
             int i;
