@@ -12,6 +12,7 @@ using TestAPI.Repositories;
 using TestAPI.DataStore;
 using TestAPI.Utilities;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace TestAPI
 {
@@ -39,11 +40,15 @@ namespace TestAPI
 					});
 			});
 
-            services.AddSingleton<IPhoneNumberRepository, PhoneNumberRepository>();
+            //services.AddSingleton<IPhoneNumberRepository, PhoneNumberRepository>();
             services.AddSingleton<IPhoneNumberFormat,USPhoneNumberFormat>();
             services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase());
             services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();
             services.AddMvc();
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new Info { Title = "Test API", Version = "v1" });
+			});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +59,15 @@ namespace TestAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+			app.UseSwagger();
+
+			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+			app.UseSwaggerUI(c =>
+			{
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "Test API for Phone Number Validation");
+			});
+
+			app.UseMvc();
         }
     }
 }
