@@ -6,6 +6,6 @@
       <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" xmlns="" />
       <Variable name="ASPNETCORE_ENVIRONMENT" value="Development" xmlns="" />
     </EnvironmentVariables>
-    <LaunchUrl>api/values</LaunchUrl>
+    <LaunchUrl>swagger</LaunchUrl>
   </PropertyGroup>
 </Project>

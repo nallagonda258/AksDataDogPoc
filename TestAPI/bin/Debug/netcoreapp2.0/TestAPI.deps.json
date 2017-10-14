@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "a2b84868c84f871151929c650ed37f1a1b94e8fc"
+    "signature": "cb645472e65fa95072de7b54cf230d893902c506"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,8 @@
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.EntityFrameworkCore.InMemory": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0",
-          "Swashbuckle.AspNetCore": "1.0.0"
+          "Swashbuckle.AspNetCore": "1.0.0",
+          "Twilio": "5.7.1"
         },
         "runtime": {
           "TestAPI.dll": {}
@@ -3841,6 +3842,22 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "Twilio/5.7.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "1.1.4",
+          "Microsoft.IdentityModel.Tokens": "5.1.4",
+          "NETStandard.Library": "2.0.0",
+          "Newtonsoft.Json": "10.0.1",
+          "System.Collections.Specialized": "4.3.0",
+          "System.IdentityModel.Tokens.Jwt": "5.1.4"
+        },
+        "runtime": {
+          "lib/netstandard1.4/Twilio.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.4/Twilio.dll": {}
+        }
+      },
       "WindowsAzure.Storage/8.1.4": {
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
@@ -6061,6 +6078,13 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Twilio/5.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NknI8aX7rRZMZThc0Bn0jxf6T918qZSym88awfUc1TltmhqXQdoVCq6VnC7dKrjLKT/Bvl4zqly/3q9cdDvH1g==",
+      "path": "twilio/5.7.1",
+      "hashPath": "twilio.5.7.1.nupkg.sha512"
     },
     "WindowsAzure.Storage/8.1.4": {
       "type": "package",

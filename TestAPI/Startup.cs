@@ -40,7 +40,7 @@ namespace TestAPI
 					});
 			});
 
-            //services.AddSingleton<IPhoneNumberRepository, PhoneNumberRepository>();
+            services.Configure<TwilioApiCredentials>(Configuration.GetSection("Twilio"));
             services.AddSingleton<IPhoneNumberFormat,USPhoneNumberFormat>();
             services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase());
             services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();

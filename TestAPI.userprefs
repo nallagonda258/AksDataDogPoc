@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{A574DCC2-E658-400A-B94F-17E5B7EBE887}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="TestAPI/Repositories/PhoneNumberRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TestAPI/DataStore/TwilioApiCredentials.cs">
     <Files>
-      <File FileName="TestAPI/Utilities/USPhoneNumberFormat.cs" Line="32" Column="10" />
-      <File FileName="TestAPI/Startup.cs" Line="1" Column="1" />
+      <File FileName="TestAPI/Utilities/USPhoneNumberFormat.cs" Line="39" Column="71" />
+      <File FileName="TestAPI/appsettings.Development.json" Line="2" Column="1" />
       <File FileName="TestAPI/Program.cs" Line="18" Column="10" />
-      <File FileName="TestAPI/Controllers/PhoneNumberController.cs" Line="35" Column="1" />
-      <File FileName="TestAPI/Repositories/PhoneNumberRepository.cs" Line="31" Column="94" />
+      <File FileName="TestAPI/Startup.cs" Line="23" Column="13" />
+      <File FileName="TestAPI/appsettings.json" Line="5" Column="5" />
+      <File FileName="TestAPI/DataStore/TwilioApiCredentials.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

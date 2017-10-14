@@ -1,14 +1,23 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Text;
+using Microsoft.Extensions.Options;
+using TestAPI.DataStore;
+using Twilio;
+using Twilio.Rest.Lookups.V1;
+using Twilio.Types;
 namespace TestAPI.Utilities
 {
     public class USPhoneNumberFormat : IPhoneNumberFormat
     {
         private int _countryCode;
+        private readonly TwilioApiCredentials _credentials;
 
-        public USPhoneNumberFormat()
+        public USPhoneNumberFormat(IOptions<TwilioApiCredentials> credentials)
         {
             _countryCode = 1;
+            _credentials = credentials.Value;
         }
 
         public string countryCodeFormat(string number)
@@ -26,6 +35,22 @@ namespace TestAPI.Utilities
 
 			}
             return normalizedPhoneNumber.ToString();
+        }
+
+        private Boolean thirdPartyValidation(string phoneNumber)
+        {
+			Boolean isValid = false;
+			TwilioClient.Init(_credentials.User, _credentials.Token);
+            try
+            {
+				var phoneNumberDetails = PhoneNumberResource.Fetch(new PhoneNumber(phoneNumber), "US");
+                isValid = true;
+            }
+            catch(Twilio.Exceptions.ApiException ex)
+            {
+                //log the invalid phone number
+            }
+            return isValid;
         }
 
         private string formatInputPhoneNumber(string number)
@@ -73,11 +98,11 @@ namespace TestAPI.Utilities
             {
 				if (numberFormat[0] == '1' && numberFormat.Length == 11)
 				{
-					return true;
+                    return thirdPartyValidation(number);
 				}
 				else if (numberFormat.Length == 10)
 				{
-					return true;
+                    return thirdPartyValidation(number);
 				}
 				else
 				{
