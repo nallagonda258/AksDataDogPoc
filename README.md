@@ -2,7 +2,7 @@ API project in C#
 
 1. POST API to save phone numbers.
 
-http://localhost:<your port>/api/users/{userId}/phone-numbers
+http://localhost/api/users/{userId}/phone-numbers
 
 Request Body
 
