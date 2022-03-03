@@ -8,7 +8,7 @@ metadata:
   labels: {}
 type: Opaque
 data:
-  api-key: Y2RkNTFjOWYwNzNjOTc5MjcxZmZjZmE2NWY4ZTU5ZGQ=
+  api-key: <Base 64 encoded api key>
 ---
 # Source: datadog/templates/install_info-configmap.yaml
 apiVersion: v1
