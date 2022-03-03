@@ -8,4 +8,10 @@
     </EnvironmentVariables>
     <LaunchUrl>swagger</LaunchUrl>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ActiveDebugProfile>TestAPI</ActiveDebugProfile>
+  </PropertyGroup>
 </Project>

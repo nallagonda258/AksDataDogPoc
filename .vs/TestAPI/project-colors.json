@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a574dcc2-e658-400a-b94f-17e5b7ebe887": {
+      "ProjectGuid": "a574dcc2-e658-400a-b94f-17e5b7ebe887",
+      "DisplayName": "TestAPI",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "172003e2-10e4-402f-ae20-bd271b8f852a": {
+      "ProjectGuid": "172003e2-10e4-402f-ae20-bd271b8f852a",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 1
+    },
+    "b26b8e94-f9d0-4f24-90af-bc5df056b613": {
+      "ProjectGuid": "b26b8e94-f9d0-4f24-90af-bc5df056b613",
+      "DisplayName": "docker-compose",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,15 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using TestAPI.Model;
-using TestAPI.Repositories;
 using TestAPI.Entities;
-using Microsoft.AspNetCore.Mvc;
-using TestAPI.DataStore;
-using TestAPI.Utilities;
 using TestAPI.Messages;
 using TestAPI.Messages.ErrorHandling;
+using TestAPI.Model;
+using TestAPI.Repositories;
+using TestAPI.Utilities;
 
 namespace TestAPI.Controllers
 {

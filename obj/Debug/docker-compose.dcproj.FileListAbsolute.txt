@@ -1,0 +1,10 @@
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\TestAPI.deps.json
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\TestAPI.runtimeconfig.json
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\TestAPI.runtimeconfig.dev.json
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\appsettings.Development.json
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\appsettings.json
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\TestAPI.dll
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\bin\Debug\TestAPI.pdb
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+C:\Rajesh-Working\Samples\ASP.NET-Web-API\obj\Debug\docker-compose.dcproj.CopyComplete

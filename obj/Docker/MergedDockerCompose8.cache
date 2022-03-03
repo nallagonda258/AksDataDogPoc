@@ -1,0 +1,7 @@
+services:
+  testapi:
+    build:
+      context: C:\Rajesh-Working\Samples\ASP.NET-Web-API
+      dockerfile: TestAPI/Dockerfile
+    image: p7165817/testapi
+version: '3.4'
